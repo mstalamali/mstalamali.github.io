@@ -139,11 +139,16 @@ strong {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 
-code,
-kbd,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+code,kbd,pre,samp {
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace
+}
+
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px
 }
 
 /**
