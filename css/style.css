@@ -986,6 +986,208 @@ canvas{
 
 /*--------------- Footer area ends -------------*/
 
+/* ===============================================
+   DARK MODE STYLES
+   =============================================== */
+
+/* Dark mode toggle button */
+.theme-toggle {
+    background: none;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+    margin-top: 8px;
+}
+
+.theme-toggle:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    transform: scale(1.05);
+}
+
+.theme-toggle:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* CSS Variables for theme colors */
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --heading-color: #ffffff;
+    --accent-color: #E15F41;
+    --secondary-bg: #2d2d2d;
+    --border-color: #404040;
+    --card-bg: #242424;
+    --nav-bg: rgba(26, 26, 26, 0.9);
+}
+
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --heading-color: #333333;
+    --accent-color: #E15F41;
+    --secondary-bg: #f8f9fa;
+    --border-color: #e0e0e0;
+    --card-bg: #ffffff;
+    --nav-bg: rgba(255, 255, 255, 0.9);
+}
+
+/* Apply dark mode styles */
+[data-theme="dark"] body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+    color: var(--heading-color);
+}
+
+[data-theme="dark"] .nav-area {
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+}
+
+[data-theme="dark"] .navbar-brand {
+    color: var(--heading-color) !important;
+}
+
+[data-theme="dark"] .navbar-collapse ul li a {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .navbar-collapse ul li a:hover {
+    color: var(--accent-color) !important;
+}
+
+[data-theme="dark"] .banner-area {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+[data-theme="dark"] .about-area,
+[data-theme="dark"] .resume-area,
+[data-theme="dark"] .services-area,
+[data-theme="dark"] .portfolio-area {
+    background-color: var(--bg-color);
+}
+
+[data-theme="dark"] .single-services {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .single-services:hover {
+    background-color: var(--secondary-bg);
+    transform: translateY(-5px);
+}
+
+[data-theme="dark"] .education-area,
+[data-theme="dark"] .experience-area {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+[data-theme="dark"] .content {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+[data-theme="dark"] .modal-content {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .modal-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .modal-footer {
+    border-top: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .btn-default {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .btn-default:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+[data-theme="dark"] .timeline .wrapper .content::before {
+    background-color: var(--border-color);
+}
+
+[data-theme="dark"] .line1,
+[data-theme="dark"] .line2 {
+    background-color: var(--accent-color);
+}
+
+/* Dark mode styles for publications */
+[data-theme="dark"] #portfolio .content,
+[data-theme="dark"] #portfolio .education-area,
+[data-theme="dark"] #portfolio .education-area p,
+[data-theme="dark"] #portfolio .education-area strong,
+[data-theme="dark"] #portfolio .education-area em,
+[data-theme="dark"] #portfolio .education-area small {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] #portfolio .education-area a {
+    color: var(--accent-color) !important;
+}
+
+[data-theme="dark"] #portfolio .education-area a:hover {
+    color: var(--accent-hover) !important;
+}
+
+/* Smooth transitions for theme switching */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Preloader dark mode */
+[data-theme="dark"] .loader_bg {
+    background-color: var(--bg-color);
+}
+
+[data-theme="dark"] .loader {
+    border-top-color: var(--accent-color);
+}
+
+/* Contact form dark mode */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus {
+    border-color: var(--accent-color);
+    background-color: var(--card-bg);
+}
+
 
 
 

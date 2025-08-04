@@ -66,6 +66,16 @@
 
     <!--Responsive css-->
     <link rel="stylesheet" href="css/responsive.css">
+
+    <!--Theme initialization script (prevents flash)-->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
 <body>
 
@@ -105,6 +115,11 @@
                                         <li><a class="smooth-menu" href="#portfolio">Publications</a></li>
 <!--                                        <li><a class="smooth-menu" href="#testimonial">Testimonial</a></li>-->
                                         <li><a class="smooth-menu" href="#contact">Contact</a></li>
+                                        <li>
+                                            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                                                🌙
+                                            </button>
+                                        </li>
                                     </ul>
                                 </nav>
                             </div>
@@ -1324,6 +1339,9 @@ year = {2018}
 
     <!--Contact js-->
     <script src="js/contact.js"></script>
+
+    <!--Dark mode js-->
+    <script src="js/dark-mode.js"></script>
 
     <!--Main js-->
     <script src="js/main.js"></script>
