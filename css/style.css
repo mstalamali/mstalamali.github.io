@@ -1117,6 +1117,14 @@ canvas{
     margin-bottom: 20px;
 }
 
+/* Avoid double boxed appearance in the publications area */
+[data-theme="dark"] #portfolio .content {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
 /* Make text in the resume section readable in dark mode while keeping links unchanged */
 [data-theme="dark"] #resume,
 [data-theme="dark"] #resume *:not(a) {
@@ -1175,8 +1183,40 @@ canvas{
 [data-theme="dark"] #portfolio .education-area strong,
 [data-theme="dark"] #portfolio .education-area em,
 [data-theme="dark"] #portfolio .education-area small {
+    color: inherit;
+}
+
+/* Dark mode: contact area styling */
+[data-theme="dark"] .contact-area {
+    /* surrounding area should be dark */
+    background-color: var(--bg-color) !important;
     color: var(--text-color) !important;
 }
+
+[data-theme="dark"] .contact-area .form-control{
+    /* keep input fields light with black text for readability */
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #000000 !important;
+    border: 1px solid #cccccc !important;
+}
+
+[data-theme="dark"] .contact-area textarea.form-control{
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #000000 !important;
+    border: 1px solid #cccccc !important;
+}
+
+[data-theme="dark"] .contact-area .form-control::placeholder{
+    color: #666666 !important;
+}
+
+[data-theme="dark"] .contact-area .btn.btn-send{
+    background-color: var(--accent-color) !important;
+    color: #ffffff !important;
+}
+
 
 [data-theme="dark"] #portfolio .education-area a {
     color: var(--accent-color) !important;
