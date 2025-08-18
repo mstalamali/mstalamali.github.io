@@ -639,7 +639,7 @@ canvas{
 /*--------------9. Portfolio area starts-----------*/
 
 #portfolio h1 {
-    /border-left: 3px solid #E94E63;
+    border-left: 3px solid #E94E63;
     padding-left: 15px;
     font-size: 30px;
 }
@@ -1108,6 +1108,22 @@ canvas{
     margin-bottom: 20px;
 }
 
+/* Avoid double boxed appearance in the resume: .education-area already provides the card */
+[data-theme="dark"] #resume .content {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    /* keep spacing between entries */
+    margin-bottom: 20px;
+}
+
+/* Make text in the resume section readable in dark mode while keeping links unchanged */
+[data-theme="dark"] #resume,
+[data-theme="dark"] #resume *:not(a) {
+    /* use theme variable for text; force with !important to override inline or component styles */
+    color: var(--text-color) !important;
+}
+
 [data-theme="dark"] .modal-content {
     background-color: var(--card-bg);
     color: var(--text-color);
@@ -1120,6 +1136,16 @@ canvas{
 
 [data-theme="dark"] .modal-footer {
     border-top: 1px solid var(--border-color);
+}
+
+/* Social icons: make icon color and border white in dark mode, preserve hover */
+[data-theme="dark"] .socials a {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+[data-theme="dark"] .socials a i {
+    color: #ffffff !important;
 }
 
 [data-theme="dark"] .btn-default {
