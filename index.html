@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- MAINTENANCE MODE: remove the maintenance-overlay div below to restore the site -->
 <html lang="en"><head>
     <!--meta tags-->
     <meta charset="utf-8">
@@ -78,6 +79,35 @@
     </script>
 </head>
 <body>
+
+    <!-- MAINTENANCE OVERLAY: delete this entire block to restore the site -->
+    <div id="maintenance-overlay" style="
+        position: fixed;
+        inset: 0;
+        z-index: 999999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #0f1923;
+        color: #ffffff;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        text-align: center;
+        padding: 2rem;
+    ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#f0a500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:1.5rem">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+            <path d="M12 2v2M12 20v2M2 12h2M20 12h2"/>
+            <path d="M17 7a7 7 0 0 1 0 10M7 7a7 7 0 0 0 0 10"/>
+        </svg>
+        <h1 style="font-size:2.5rem;font-weight:700;margin:0 0 0.75rem">Site Under Maintenance</h1>
+        <p style="font-size:1.1rem;color:#b0b8c1;max-width:420px;margin:0 0 2rem">
+            I'm currently updating my website. Please check back soon!
+        </p>
+        <p style="font-size:0.9rem;color:#5a6a7a;">&mdash; Mohamed S. Talamali</p>
+    </div>
+    <!-- END MAINTENANCE OVERLAY -->
 
     <!--preloader starts-->
 
